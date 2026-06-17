@@ -1,11 +1,16 @@
 import HabitItem from "./HabitItem";
 
-export default function HabitList() {
-	const habits = [
-		{ id: "1", title: "Hi" },
-		{ id: "2", title: "Buy" },
-	];
+export type Habit = {
+	id: string;
+	name: string;
+};
 
+type HabitListProps = {
+	habits: Habit[];
+	deleteHabit: (id: string) => void;
+};
+
+export default function HabitList({ habits, deleteHabit }: HabitListProps) {
 	if (habits.length === 0) {
 		return (
 			<p className="text-center text-zinc-500 py-12">
@@ -16,7 +21,7 @@ export default function HabitList() {
 	return (
 		<div className="flex flex-col gap-3">
 			{habits.map((habit) => (
-				<HabitItem key={habit.id} habit={habit} />
+				<HabitItem deleteHabit={deleteHabit} key={habit.id} habit={habit} />
 			))}
 		</div>
 	);
