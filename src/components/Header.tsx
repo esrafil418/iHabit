@@ -1,4 +1,4 @@
-import Buttons from "./Buttons";
+import Button from "./Button";
 
 export default function Header() {
 	return (
@@ -11,8 +11,8 @@ export default function Header() {
 			<div className="flex flex-col gap-1 items-end">
 				<span className="text-zinc-400 text-sm">Apr 6 - Apr 12</span>
 				<div className="flex items-center gap-3">
-					<Buttons>Prev</Buttons>
-					<Buttons>Next</Buttons>
+					<Button>Prev</Button>
+					<Button>Next</Button>
 				</div>
 			</div>
 		</header>

@@ -4,7 +4,7 @@ type ButtonProps = {
 	children: ReactNode;
 };
 
-export default function Buttons({ children }: ButtonProps) {
+export default function Button({ children }: ButtonProps) {
 	return (
 		<button
 			type="button"
