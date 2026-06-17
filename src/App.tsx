@@ -1,3 +1,9 @@
+import Header from "./components/Header";
+
 export default function App() {
-	return <div className="text-red-800 font-bold">App</div>;
+	return (
+		<div className="max-w-2xl mx-auto p-4 flex flex-col gap-4">
+			<Header />
+		</div>
+	);
 }
